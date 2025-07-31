@@ -27,6 +27,7 @@ It automates security controls, prevents configuration drift and validates compl
 - [Lessons Learned](#lessons-learned)
 - [Notes and Considerations](#notes-and-considerations)
 - [References](#references)
+- [Contact](#contact)
 
 ---
 
@@ -179,5 +180,7 @@ I then bundled these policies into an **Azure Blueprint** with a predefined reso
 
 ---
 
-Sebastian Silva C. – July 2025 – Berlin, Germany  
-[LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC)
+## Contact
+
+Sebastian Silva C. – July, 2025 – Berlin, Germany.  
+[LinkedIn](https://www.linkedin.com/in/sebastiansilc) | [GitHub](https://github.com/SebaSilC) | [sebastian@playbookvisualarts.com](mailto:sebastian@playbookvisualarts.com)
