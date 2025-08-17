@@ -81,45 +81,45 @@ I then bundled these policies into an **Azure Blueprint** with a predefined reso
 
 **1. Resource Group Setup**  
    - Created `rg-policy-lab` to test early policy assignments.  
-   - Confirmed its creation before applying scope-level enforcement *(Screenshot: resource-group-created.png)*
+   - Confirmed its creation before applying scope-level enforcement *(Screenshot: `resource-group-created.png`)*
 
 **2. Custom Policy Definition**  
    - Authored a JSON policy (`Deny-Public-IP`) to block creation of public IP addresses.  
-   - Used Azure CLI to create the custom policy definition *(Screenshot: custom-policy-definition.png)*
+   - Used Azure CLI to create the custom policy definition *(Screenshot: `custom-policy-definition.png`)*
 
 **3. Policy Assignment (Custom & Built-in)**  
    - Assigned `Deny-Public-IP` to `rg-policy-lab` scope.  
-   - Assigned built-in policy `Require a tag on resources` with parameter `Environment`*(Screenshots: policy-assignment-basics.png, policy-assignment-review.png, tag-policy-assignment-basics.png, tag-policy-parameters.png & tag-policy-review.png)*
+   - Assigned built-in policy `Require a tag on resources` with parameter `Environment` *(Screenshots: `policy-assignment-basics.png`, `policy-assignment-review.png`, `tag-policy-assignment-basics.png`, `tag-policy-parameters.png` & `tag-policy-review.png`)*
 
 **4. Manual Enforcement Testing**  
    - Attempted to create:
      - Public IP in `rg-policy-lab` → Denied (proves Deny-Public-IP works)  
-     - Storage Account without `Environment` tag → Denied (proves tag policy works)*(Screenshots: policy-enforcement-public-ip-error.png & tag-policy-enforcement-error.png)*
+     - Storage Account without `Environment` tag → Denied (proves tag policy works)*(Screenshots: `policy-enforcement-public-ip-error.png` & `tag-policy-enforcement-error.png`)*
 
 **5. Compliance Dashboard Validation**  
    - Used Policy > Compliance to track enforcement results.  
-   - Scoped to `rg-policy-lab` and confirmed policy effect *(Screenshot: compliance-dashboard-updated.png)*
+   - Scoped to `rg-policy-lab` and confirmed policy effect *(Screenshot: `compliance-dashboard-updated.png`)*
 
 **6. Azure Blueprint Creation**  
    - Created blueprint `secure-rg-blueprint` with:
      - Resource Group: `rg-secured-env`.
      - Deny-Public-IP policy.
-     - Require Environment tag policy *(Screenshots: blueprint-basics.png & blueprint-artifact-list.png)*
+     - Require Environment tag policy *(Screenshots: `blueprint-basics.png` & `blueprint-artifact-list.png`)*
 
 **7. Blueprint Assignment**  
    - Published version `v1.0` of the blueprint.  
    - Assigned the blueprint to the subscription with:
      - Tag: `Environment`.
-     - Location: `East US` *(Screenshots: blueprint-assignment-parameters.png & blueprint-published-overview.png)*
+     - Location: `East US` *(Screenshots: `blueprint-assignment-parameters.png` & `blueprint-published-overview.png`)*
 
 **8. Post-Blueprint Enforcement Test**  
    - Attempted to deploy:
      - Public IP in `rg-secured-env` → Denied by blueprint-assigned policy.  
-     - Untagged Storage Account in `rg-secured-env` → Denied *(Screenshots: policy-denial-public-ip.png & policy-denial-storage-no-tag.png)*
+     - Untagged Storage Account in `rg-secured-env` → Denied *(Screenshots: `policy-denial-public-ip.png` & `policy-denial-storage-no-tag.png`)*
 
 **9. Compliance Confirmation (Blueprint Scope)**  
    - Scoped the Compliance Dashboard to `rg-secured-env`.  
-   - Verified that blueprint-assigned policies were active and compliant *(Screenshot: blueprint-compliance-status.png)*
+   - Verified that blueprint-assigned policies were active and compliant *(Screenshot: `blueprint-compliance-status.png`)*
 
 **10. Cleanup**  
    - Confirmed deployment of `rg-secured-env` via Blueprint.  
@@ -130,7 +130,7 @@ I then bundled these policies into an **Azure Blueprint** with a predefined reso
 
 ## Screenshots
 
-*All screenshots are included in the screenshots/ folder.*
+*All screenshots are included in the `screenshots/` folder.*
 
 | Step | Filename                               | Description                                        |
 |------|----------------------------------------|----------------------------------------------------|
